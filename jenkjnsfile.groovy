@@ -51,7 +51,7 @@ job("Send Email"){
 
 
                triggers{
-                        upstream("Test Webserver","Failed")
+                        upstream("Test Webserver","FAILURE")
                         }
 
                 post {
