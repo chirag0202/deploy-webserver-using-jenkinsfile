@@ -9,7 +9,7 @@ job("Pull code from Github Repo"){
                         githubPush()
                         }
                 steps{
-                      shell(sudo cp -rvf index.html /task6)
+                      shell("sudo cp -rvf index.html /task6")
                       }
          
 }
