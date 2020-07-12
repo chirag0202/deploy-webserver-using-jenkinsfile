@@ -1,4 +1,4 @@
-if kubectl get all|grep webtest
+if sudo kubectl get all|grep webtest
 then
 sudo kubectl delete all --all
 sudo kubectl delete pvc --all
