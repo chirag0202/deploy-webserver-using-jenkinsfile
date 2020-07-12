@@ -60,8 +60,8 @@ job("Send Email"){
                       }
 
 }
-buildPipelineView('Deploy Webserver using Groovy') {
-    title('Deploy Webserver using Groovy')
+buildPipelineView('Deploy Webserver Using Groovy') {
+    title('Deploy Webserver Using Groovy')
     displayedBuilds(4)
     selectedJob('Pull code from Github Repo')
     alwaysAllowManualTrigger()
