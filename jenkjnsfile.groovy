@@ -49,11 +49,12 @@ job("Test Webserver"){
 job("Send Email"){
               description("Send email to developer if job 3 fails")
 
-
-               triggers{
-                        upstream("Test Webserver","FAILURE")
-                        }
-
+              triggers{
+                buildResult('* * * * *') {
+                   combinedJobs()
+                   triggerInfo('Test Webserver', BuildResult.UNSTABLE, BuildResult.FAILURE)
+        }
+      }
                 steps{
                       shell("python3 /mail/mail.py")
                       }
