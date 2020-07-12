@@ -54,14 +54,8 @@ job("Send Email"){
                         upstream("Test Webserver","FAILURE")
                         }
 
-                post {
-                    always {
-                        echo 'I will always say Hello again!'
-            
-                        emailext body: "The Webserver deployment failed",
-                            recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
-                            subject: "Webserver Deployment Failed"
-                           }
+                steps{
+                      shell("python3 /mail/mail.py")
                       }
 
 }
