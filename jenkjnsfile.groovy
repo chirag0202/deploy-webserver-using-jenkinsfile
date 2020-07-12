@@ -61,12 +61,9 @@ job("Send Email"){
 
 }
 buildPipelineView('Deploy Webserver using Groovy') {
-    filterBuildQueue()
-    filterExecutors()
     title('Deploy Webserver using Groovy')
     displayedBuilds(4)
     selectedJob('Pull code from Github Repo')
     alwaysAllowManualTrigger()
     showPipelineParameters()
-    refreshFrequency(60)
 }
