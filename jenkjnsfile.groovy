@@ -59,7 +59,7 @@ job("Send Email"){
                       }
 
 }
-buildPipelineView('project-A') {
+buildPipelineView('Deploy Webserver using Groovy') {
     filterBuildQueue()
     filterExecutors()
     title('Deploy Webserver using Groovy')
